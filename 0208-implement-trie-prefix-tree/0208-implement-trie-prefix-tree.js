@@ -10,7 +10,7 @@ var Trie = function() {
  * @return {void}
  */
 Trie.prototype.insert = function(word) {
-    list.push(word);
+    if(!list.includes(word))    list.push(word);
     return null
 };
 
