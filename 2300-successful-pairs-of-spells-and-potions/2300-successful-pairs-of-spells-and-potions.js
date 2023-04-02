@@ -7,11 +7,6 @@
 var successfulPairs = function(spells, potions, success) {
     let tempPotions = potions.sort((a,b)=>a-b);
     let minVal = 0;
-    if(tempPotions[potions.length-1] >= success){
-        const tempData = binarySearch(success,tempPotions)
-        minVal = potions.length-tempData;
-        tempPotions = potions.slice(0,tempData);
-    }
     const maxSpell = Math.ceil(success/Math.min(...tempPotions));
     const minSpell = Math.ceil(success/Math.max(...tempPotions));
     const memo = {};
